@@ -43,7 +43,7 @@ function getMovieDisplay(movies){
 function fetchMovie(e){
   let input = document.querySelector("#inputId").value.replace(" ","+");
   console.log(input)
-  fetch(`http://www.omdbapi.com/?s=${input}&apikey=1a115513`)
+  fetch(`https://www.omdbapi.com/?s=${input}&apikey=1a115513`)
   .then(response => response.json())
   .then(data => 
         displayData(data.Search, e)
@@ -53,7 +53,7 @@ function fetchMovie(e){
 function fetchGif(e){
   let input = document.querySelector("#inputId").value.replace(" ","+");
   console.log(input)
-  fetch(`http://api.giphy.com/v1/gifs/search?q=${input}&api_key=RwxMrNo9mEFKeuL9FBZMBBG8u47CVs7q&limit=5`)
+  fetch(`https://api.giphy.com/v1/gifs/search?q=${input}&api_key=RwxMrNo9mEFKeuL9FBZMBBG8u47CVs7q&limit=5`)
   .then(response => response.json())
   .then(data => 
       displayData(data.data, e)
